@@ -157,7 +157,7 @@ class RESTy extends React.Component {
                   <span>GET</span>
                 </label> */}
 
-                <Label checked={this.state.method} value="GET" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="get" onChange={this.handleChange}/>
                 <label>
                   <input
                     type="radio"
