@@ -4,7 +4,8 @@ import React from 'react';
 import superagent from 'superagent';
 import ReactJson from 'react-json-view';
 import md5 from 'md5';
-import URL from '../url/index';
+import Url from '../url/index';
+import Label from '../label/index';
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -141,20 +142,22 @@ class RESTy extends React.Component {
         <section className="deck">
           <form onSubmit={this.callAPI}>
             <section>
-              
-              <URL value={this.state.url} onChange={this.handleChange} />
+
+              <Url value={this.state.url} onChange={this.handleChange} />
 
               <div id="methods">
-                <label>
+                {/* <label>
                   <input
                     type="radio"
                     name="method"
-                    checked={this.state.method === 'get' ? true : false}
+                    checked={this.state.method === 'GET' ? true : false}
                     value="get"
                     onChange={this.handleChange}
                   />
                   <span>GET</span>
-                </label>
+                </label> */}
+
+                <Label checked={this.state.method} value="GET" onChange={this.handleChange}/>
                 <label>
                   <input
                     type="radio"
@@ -209,7 +212,7 @@ class RESTy extends React.Component {
                   onChange={this.handleChange}
                   value={this.state.requestBody}
                   disabled={
-                    this.state.method.match(/get|delete/) ? true : false
+                    this.state.method.match(/GET|get|DELETE|delete/) ? true : false
                   }
                 />
               </div>
