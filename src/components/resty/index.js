@@ -146,58 +146,11 @@ class RESTy extends React.Component {
               <Url value={this.state.url} onChange={this.handleChange} />
 
               <div id="methods">
-                {/* <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'GET' ? true : false}
-                    value="get"
-                    onChange={this.handleChange}
-                  />
-                  <span>GET</span>
-                </label> */}
-
                 <Label checked={this.state.method} value="get" onChange={this.handleChange}/>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'post' ? true : false}
-                    value="post"
-                    onChange={this.handleChange}
-                  />
-                  <span>POST</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'put' ? true : false}
-                    value="put"
-                    onChange={this.handleChange}
-                  />
-                  <span>PUT</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'patch' ? true : false}
-                    value="patch"
-                    onChange={this.handleChange}
-                  />
-                  <span>PATCH</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'delete' ? true : false}
-                    value="delete"
-                    onChange={this.handleChange}
-                  />
-                  <span>DELETE</span>
-                </label>
+                <Label checked={this.state.method} value="post" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="put" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="patch" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="delete" onChange={this.handleChange}/>
                 <label>
                   <button type="submit">Go!</button>
                 </label>
