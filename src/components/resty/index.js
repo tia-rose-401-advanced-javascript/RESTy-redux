@@ -141,14 +141,8 @@ class RESTy extends React.Component {
         <section className="deck">
           <form onSubmit={this.callAPI}>
             <section>
-              <input
-                type="text"
-                className="wide"
-                name="url"
-                placeholder="URL"
-                value={this.state.url}
-                onChange={this.handleChange}
-              />
+              
+              <URL value={this.state.url} onChange={this.handleChange} />
 
               <div id="methods">
                 <label>

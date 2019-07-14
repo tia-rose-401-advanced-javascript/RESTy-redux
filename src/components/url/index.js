@@ -8,8 +8,8 @@ class Url extends React.Component{
           className="wide"
           name="url"
           placeholder="URL"
-          value={this.state.url}
-          onChange={this.handleChange}
+          value={this.props.value}
+          onChange={this.props.onChange}
         />
     )
   }
