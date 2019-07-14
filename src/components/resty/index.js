@@ -6,6 +6,7 @@ import ReactJson from 'react-json-view';
 import md5 from 'md5';
 import Url from '../url/index';
 import Label from '../label/index';
+import Button from '../button/index';
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -151,9 +152,7 @@ class RESTy extends React.Component {
                 <Label checked={this.state.method} value="put" onChange={this.handleChange}/>
                 <Label checked={this.state.method} value="patch" onChange={this.handleChange}/>
                 <Label checked={this.state.method} value="delete" onChange={this.handleChange}/>
-                <label>
-                  <button type="submit">Go!</button>
-                </label>
+                <Button />
               </div>
             </section>
 
