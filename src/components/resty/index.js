@@ -11,6 +11,9 @@ import JsonText from '../jsonText/index';
 import AuthButton from '../authorization/button';
 import BasicInputUser from '../authorization/basic/basicInputUser';
 import BasicInputPass from '../authorization/basic/basicInputPass';
+import Bearer from '../authorization/bearer/index';
+import JsonHeader from '../jsonview/header';
+import JsonResponse from '../jsonview/response';
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -180,33 +183,28 @@ class RESTy extends React.Component {
 
                 <div className={'visible-' + this.state.headersVisible}>
                   <h2>Bearer Token</h2>
-                  {/* Component */}
-                  <input
-                    onChange={this.handleChange}
-                    type="text"
-                    className="wide"
-                    name="token"
-                    placeholder="Token"
-                    value={this.state.token}
-                  />
+                  <Bearer onChange={this.handleChange} value={this.state.token} />
                 </div>
+
               </div>
             </section>
           </form>
           {/* Component */}
           <div id="json">
-            <ReactJson
+            {/* <ReactJson
               name="Headers"
               enableClipboard={false}
               collapsed={true}
               src={this.state.header}
-            />
-            <ReactJson
+            /> */}
+            <JsonHeader src={this.state.header} />
+            <JsonResponse src={this.state.body} />
+            {/* <ReactJson
               name="Response"
               enableClipboard={false}
               collapsed={false}
               src={this.state.body}
-            />
+            /> */}
           </div>
         </section>
       </main>
