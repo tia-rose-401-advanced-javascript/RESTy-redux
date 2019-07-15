@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Basic Input Username class/component
+ * @description input field for username with info being passed via props
+ */
+
 class BasicInputUser extends React.Component{
   render(){
     return(

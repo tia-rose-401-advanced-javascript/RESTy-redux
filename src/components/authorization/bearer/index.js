@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Bearer class/component
+ * @description input field with info being passed via props
+ */
+
 class Bearer extends React.Component{
   render(){
     return(

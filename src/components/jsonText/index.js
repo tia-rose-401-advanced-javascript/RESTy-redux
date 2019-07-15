@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * JsonText class/component
+ * @description text area with crucial behaviour being passed down via props
+ */
+
 class JsonText extends React.Component{
   render(){
     return(

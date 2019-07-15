@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Header class/component
+ * @description renders an h1 tag
+ */
+
 class Header extends React.Component {
   render() {
     return (
