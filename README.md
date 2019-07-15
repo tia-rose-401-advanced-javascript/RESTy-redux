@@ -4,7 +4,7 @@
 
 ### Links and Resources
 * [submission PR](https://github.com/tia-rose-401-advanced-javascript/RESTy-redux/pull/1)
-* [AWS]()
+* [AWS](http://resty-redux.s3-website-us-west-2.amazonaws.com)
 
 
 #### Documentation
