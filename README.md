@@ -4,6 +4,7 @@
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
+* [AWS]()
 
 
 #### Documentation
@@ -22,3 +23,8 @@
 ![GamePlan](./assets/Game_Plan_RR.JPG)
 ## Wireframe
 ![Wireframe](./assets/Wireframe_RR.JPG)
+## Pre-Redux/Post Modularization
+![Pre-Redux/Post Modularization](./assets/Pre_Redux.JPG)
+## Redux Planning
+![Redux Planning](./assets/Redux_Planning.JPG)
+

@@ -2,7 +2,6 @@ import './resty.css';
 
 import React from 'react';
 import superagent from 'superagent';
-import ReactJson from 'react-json-view';
 import md5 from 'md5';
 import Url from '../url/index';
 import Label from '../label/index';
@@ -179,8 +178,6 @@ class RESTy extends React.Component {
                   <BasicInputPass onChange={this.handleChange} value={this.state.password} />
                 </div>
 
-
-
                 <div className={'visible-' + this.state.headersVisible}>
                   <h2>Bearer Token</h2>
                   <Bearer onChange={this.handleChange} value={this.state.token} />
@@ -189,22 +186,9 @@ class RESTy extends React.Component {
               </div>
             </section>
           </form>
-          {/* Component */}
           <div id="json">
-            {/* <ReactJson
-              name="Headers"
-              enableClipboard={false}
-              collapsed={true}
-              src={this.state.header}
-            /> */}
             <JsonHeader src={this.state.header} />
             <JsonResponse src={this.state.body} />
-            {/* <ReactJson
-              name="Response"
-              enableClipboard={false}
-              collapsed={false}
-              src={this.state.body}
-            /> */}
           </div>
         </section>
       </main>
