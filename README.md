@@ -3,15 +3,16 @@
 ### Author: Tia Rose
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+* [submission PR](https://github.com/tia-rose-401-advanced-javascript/RESTy-redux/pull/1)
 * [AWS]()
 
 
 #### Documentation
-* [styleguide](http://xyz.com)
+* styleguide - localhost:6060
 
 
 #### Running the app
+* `npm i`
 * `npm start`
   
 #### Tests
