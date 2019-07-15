@@ -7,6 +7,10 @@ import md5 from 'md5';
 import Url from '../url/index';
 import Label from '../label/index';
 import Button from '../button/index';
+import JsonText from '../jsonText/index';
+// import Authorization from '../authorization/index';
+import AuthButton from '../authorization/button';
+import BasicTitle from '../authorization/basic/basicTitle';
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -158,29 +162,29 @@ class RESTy extends React.Component {
 
             <section className="deck col-2">
               <div id="body">
-                <textarea
-                  placeholder="Raw JSON Body"
-                  name="requestBody"
-                  onChange={this.handleChange}
-                  value={this.state.requestBody}
+                <JsonText onchange={this.handleChange} value={this.state.requestBody}
                   disabled={
                     this.state.method.match(/GET|get|DELETE|delete/) ? true : false
-                  }
-                />
+                  } />
               </div>
 
               <div id="headers">
-                <button onClick={this.toggleHeaders}>
+                {/* <button onClick={this.toggleHeaders}>
                   Headers
-                </button>
-                <div className={'visible-' + this.state.headersVisible}>
+                </button> */}
+
+                <AuthButton onClick={this.toggleHeaders} />
+               
+                {/* <div className={'visible-' + this.state.headersVisible}>
                   <h2>Basic Authorization</h2>
+              
                   <input
                     onChange={this.handleChange}
                     name="username"
                     placeholder="Username"
                     value={this.state.username}
                   />
+              
                   <input
                     onChange={this.handleChange}
                     name="password"
@@ -188,9 +192,13 @@ class RESTy extends React.Component {
                     placeholder="Password"
                     value={this.state.password}
                   />
-                </div>
+                </div> */}
+
+
+
                 <div className={'visible-' + this.state.headersVisible}>
                   <h2>Bearer Token</h2>
+                  {/* Component */}
                   <input
                     onChange={this.handleChange}
                     type="text"
@@ -203,6 +211,7 @@ class RESTy extends React.Component {
               </div>
             </section>
           </form>
+          {/* Component */}
           <div id="json">
             <ReactJson
               name="Headers"
