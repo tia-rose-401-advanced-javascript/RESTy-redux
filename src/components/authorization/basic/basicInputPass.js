@@ -4,11 +4,11 @@ class BasicInputPass extends React.Component{
   render(){
     return(
       <input
-      onChange={this.handleChange}
+      onChange={this.props.onChange}
       name="password"
       type="password"
       placeholder="Password"
-      value={this.state.password}
+      value={this.props.value}
     />
     )
   }

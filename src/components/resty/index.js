@@ -8,9 +8,9 @@ import Url from '../url/index';
 import Label from '../label/index';
 import Button from '../button/index';
 import JsonText from '../jsonText/index';
-// import Authorization from '../authorization/index';
 import AuthButton from '../authorization/button';
-import BasicTitle from '../authorization/basic/basicTitle';
+import BasicInputUser from '../authorization/basic/basicInputUser';
+import BasicInputPass from '../authorization/basic/basicInputPass';
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -169,30 +169,12 @@ class RESTy extends React.Component {
               </div>
 
               <div id="headers">
-                {/* <button onClick={this.toggleHeaders}>
-                  Headers
-                </button> */}
-
                 <AuthButton onClick={this.toggleHeaders} />
-               
-                {/* <div className={'visible-' + this.state.headersVisible}>
+                <div className={'visible-' + this.state.headersVisible}>
                   <h2>Basic Authorization</h2>
-              
-                  <input
-                    onChange={this.handleChange}
-                    name="username"
-                    placeholder="Username"
-                    value={this.state.username}
-                  />
-              
-                  <input
-                    onChange={this.handleChange}
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    value={this.state.password}
-                  />
-                </div> */}
+                  <BasicInputUser onChange={this.handleChange} value={this.state.username} />
+                  <BasicInputPass onChange={this.handleChange} value={this.state.password} />
+                </div>
 
 
 
