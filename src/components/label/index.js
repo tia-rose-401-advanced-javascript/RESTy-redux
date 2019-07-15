@@ -1,5 +1,11 @@
 import React from 'react';
 
+
+/**
+ * Label class/component
+ * @description general label for all CRUD operations. All info is passed down via props
+ */
+
 class Label extends React.Component{
   render(){
     return(
