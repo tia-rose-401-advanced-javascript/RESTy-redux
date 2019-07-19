@@ -2,9 +2,17 @@ import './resty.css';
 
 import React from 'react';
 import superagent from 'superagent';
-import ReactJson from 'react-json-view';
 import md5 from 'md5';
-import URL from '../url/index';
+import Url from '../url/index';
+import Label from '../label/index';
+import Button from '../button/index';
+import JsonText from '../jsonText/index';
+import AuthButton from '../authorization/button';
+import BasicInputUser from '../authorization/basic/basicInputUser';
+import BasicInputPass from '../authorization/basic/basicInputPass';
+import Bearer from '../authorization/bearer/index';
+import JsonHeader from '../jsonview/header';
+import JsonResponse from '../jsonview/response';
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -141,132 +149,46 @@ class RESTy extends React.Component {
         <section className="deck">
           <form onSubmit={this.callAPI}>
             <section>
-              <input
-                type="text"
-                className="wide"
-                name="url"
-                placeholder="URL"
-                value={this.state.url}
-                onChange={this.handleChange}
-              />
+
+              <Url value={this.state.url} onChange={this.handleChange} />
 
               <div id="methods">
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'get' ? true : false}
-                    value="get"
-                    onChange={this.handleChange}
-                  />
-                  <span>GET</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'post' ? true : false}
-                    value="post"
-                    onChange={this.handleChange}
-                  />
-                  <span>POST</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'put' ? true : false}
-                    value="put"
-                    onChange={this.handleChange}
-                  />
-                  <span>PUT</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'patch' ? true : false}
-                    value="patch"
-                    onChange={this.handleChange}
-                  />
-                  <span>PATCH</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'delete' ? true : false}
-                    value="delete"
-                    onChange={this.handleChange}
-                  />
-                  <span>DELETE</span>
-                </label>
-                <label>
-                  <button type="submit">Go!</button>
-                </label>
+                <Label checked={this.state.method} value="get" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="post" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="put" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="patch" onChange={this.handleChange}/>
+                <Label checked={this.state.method} value="delete" onChange={this.handleChange}/>
+                <Button />
               </div>
             </section>
 
             <section className="deck col-2">
               <div id="body">
-                <textarea
-                  placeholder="Raw JSON Body"
-                  name="requestBody"
-                  onChange={this.handleChange}
-                  value={this.state.requestBody}
+                <JsonText onchange={this.handleChange} value={this.state.requestBody}
                   disabled={
-                    this.state.method.match(/get|delete/) ? true : false
-                  }
-                />
+                    this.state.method.match(/GET|get|DELETE|delete/) ? true : false
+                  } />
               </div>
 
               <div id="headers">
-                <button onClick={this.toggleHeaders}>
-                  Headers
-                </button>
+                <AuthButton onClick={this.toggleHeaders} />
                 <div className={'visible-' + this.state.headersVisible}>
                   <h2>Basic Authorization</h2>
-                  <input
-                    onChange={this.handleChange}
-                    name="username"
-                    placeholder="Username"
-                    value={this.state.username}
-                  />
-                  <input
-                    onChange={this.handleChange}
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    value={this.state.password}
-                  />
+                  <BasicInputUser onChange={this.handleChange} value={this.state.username} />
+                  <BasicInputPass onChange={this.handleChange} value={this.state.password} />
                 </div>
+
                 <div className={'visible-' + this.state.headersVisible}>
                   <h2>Bearer Token</h2>
-                  <input
-                    onChange={this.handleChange}
-                    type="text"
-                    className="wide"
-                    name="token"
-                    placeholder="Token"
-                    value={this.state.token}
-                  />
+                  <Bearer onChange={this.handleChange} value={this.state.token} />
                 </div>
+
               </div>
             </section>
           </form>
           <div id="json">
-            <ReactJson
-              name="Headers"
-              enableClipboard={false}
-              collapsed={true}
-              src={this.state.header}
-            />
-            <ReactJson
-              name="Response"
-              enableClipboard={false}
-              collapsed={false}
-              src={this.state.body}
-            />
+            <JsonHeader src={this.state.header} />
+            <JsonResponse src={this.state.body} />
           </div>
         </section>
       </main>
