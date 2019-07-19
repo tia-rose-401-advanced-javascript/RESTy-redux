@@ -5,14 +5,12 @@ import React from 'react';
  * @description renders a label tag that houses the Go button
  */
 
-class Button extends React.Component{
-  render(){
-    return(
-      <label>
-        <button type="submit">Go!</button>
-      </label>
-    )
-  }
+const Button = () => {
+  return(
+    <label>
+      <button type="submit">Go!</button>
+    </label>
+  )
 }
 
 export default Button;
