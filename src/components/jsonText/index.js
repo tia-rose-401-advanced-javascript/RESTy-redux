@@ -1,3 +1,6 @@
+// import React, { useContext } from "react";
+// import { RestyContext } from "../../context/restyContext";
+
 import React from 'react';
 
 /**
@@ -5,9 +8,9 @@ import React from 'react';
  * @description text area with crucial behaviour being passed down via props
  */
 
-class JsonText extends React.Component{
-  render(){
-    return(
+class JsonText extends React.Component {
+  render() {
+    return (
       <textarea
         placeholder="Raw JSON Body"
         name="requestBody"
@@ -18,23 +21,24 @@ class JsonText extends React.Component{
           this.props.disabled
         }
       />
-    )
+    );
   }
 }
 
 // const JsonText = () => {
-//   return(
+//   const state = useContext(RestyContext);
+//   return (
 //     <textarea
 //       placeholder="Raw JSON Body"
 //       name="requestBody"
-//       onChange={this.props.onChange}
-//       value={this.props.value}
+//       onChange={state.handleChange}
+//       value={state.value}
 //       disabled={
 //         // this.state.method.match(/GET|get|DELETE|delete/) ? true : false
-//         this.props.disabled
+//         state.disabled
 //       }
 //     />
-//   )
-// }
+//   );
+// };
 
 export default JsonText;
