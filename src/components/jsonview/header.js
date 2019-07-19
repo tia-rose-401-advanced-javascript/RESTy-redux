@@ -8,19 +8,6 @@ import { RestyContext } from "../../context/restyContext";
  * @description uses the react-json-view component to render JSON headers
  */
 
-// class JsonHeader extends React.Component {
-//   render() {
-//     return (
-//       <ReactJson
-//         name="Headers"
-//         enableClipboard={false}
-//         collapsed={true}
-//         src={this.props.src}
-//       />
-//     );
-//   }
-// }
-
 const JsonHeader = () => {
   const state = useContext(RestyContext);
   return (
