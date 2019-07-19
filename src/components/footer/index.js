@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * Footer class/component
+ * Footer function component
  * @description renders a p tag that is inside a section tag that is inside a footer tag
  */
 

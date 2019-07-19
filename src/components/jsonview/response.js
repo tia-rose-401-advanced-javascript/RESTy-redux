@@ -20,4 +20,15 @@ class JsonResponse extends React.Component{
   }
 }
 
+// const JsonResponse = () => {
+//   return(
+//     <ReactJson
+//       name="Response"
+//       enableClipboard={false}
+//       collapsed={false}
+//       src={this.props.src}
+//     />
+//   )
+// }
+
 export default JsonResponse;

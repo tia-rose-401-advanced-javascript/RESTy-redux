@@ -22,4 +22,19 @@ class JsonText extends React.Component{
   }
 }
 
+// const JsonText = () => {
+//   return(
+//     <textarea
+//       placeholder="Raw JSON Body"
+//       name="requestBody"
+//       onChange={this.props.onChange}
+//       value={this.props.value}
+//       disabled={
+//         // this.state.method.match(/GET|get|DELETE|delete/) ? true : false
+//         this.props.disabled
+//       }
+//     />
+//   )
+// }
+
 export default JsonText;

@@ -20,4 +20,6 @@ class Bearer extends React.Component{
   }
 }
 
+// const Bearer 
+
 export default Bearer;

@@ -15,5 +15,18 @@ class Url extends React.Component{
   }
 }
 
+// const Url = () => {
+//   return(
+//     <input
+//       type="text"
+//       className="wide"
+//       name="url"
+//       placeholder="URL"
+//       value={this.props.value}
+//       onChange={this.props.onChange}
+//     />
+//   )
+// }
+
 export default Url;
 
