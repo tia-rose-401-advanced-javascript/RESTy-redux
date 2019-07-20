@@ -1,5 +1,6 @@
 // import React, { useContext } from "react";
 // import { RestyContext } from "../../context/restyContext";
+//   const state = useContext(RestyContext);
 
 import React from 'react';
 
