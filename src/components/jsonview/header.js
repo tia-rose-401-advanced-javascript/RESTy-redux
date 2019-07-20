@@ -1,4 +1,3 @@
-// import React from 'react';
 import React, { useContext } from "react";
 import ReactJson from "react-json-view";
 import { RestyContext } from "../../context/restyContext";

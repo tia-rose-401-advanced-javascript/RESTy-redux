@@ -1,3 +1,6 @@
+// import React, { useContext } from "react";
+// import { RestyContext } from "../../context/restyContext";
+
 import React from 'react';
 
 
@@ -23,17 +26,21 @@ class Label extends React.Component{
   }
 }
 
+
+
 // const Label = () => {
+//   const state = useContext(RestyContext);
 //   return(
 //     <label>
 //       <input
 //         type="radio"
 //         name="method"
-//         checked={this.props.checked === this.props.value ? true : false}
-//         value={this.props.value}
-//         onChange={this.props.onChange}
+//         checked={state.method === state.value ? true : false}
+//         onChange={state.handleChange}
 //       />
-//       <span>{this.props.value}</span>
+
+//       {/* Issue I am having is to get the span to render. value is not in the state of RestyContext so state.value will not work */}
+//       <span>{state.value}</span>
 //     </label>
 //   )
 // }

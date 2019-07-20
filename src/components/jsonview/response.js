@@ -22,7 +22,6 @@ import { RestyContext } from "../../context/restyContext";
 
 const JsonResponse = () => {
   const state = useContext(RestyContext);
-  console.log("in json response", state);
   return (
     <ReactJson
       name="Response"
